@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+  
+    <!-- Definimos nuestra plantilla -->
+    <definition name="miplantilla" template="/WEB-INF/jsp/plantilla.jsp">
+              <put-attribute name="title" value="" />
+        <!-- La cabecera y el pie de pagina estaran fijos -->
+        <put-attribute name="cabecera" value="/WEB-INF/jsp/cabecera.jsp" />
+        <!-- El put-attribute con el nombre de "cuerpo" es variable index.jsp, listar de grupos y contactos, editar...-->
+        <put-attribute name="cuerpo" value="" />
+        <put-attribute name="pie" value="/WEB-INF/jsp/pie.jsp" />
+    </definition>
+    
+    <definition name="index" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/index.jsp" />
+    </definition>  
+      
+    <definition name="creargrupos" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/creargrupos.jsp" />
+    </definition>
+    
+    <definition name="listargrupos" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/listargrupos.jsp" />
+    </definition>     
+    
+    <definition name="editargrupo" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/editargrupo.jsp" />
+    </definition> 
+          
+    <definition name="crearcontacto" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/crearcontacto.jsp" />
+    </definition> 
+    
+    <definition name="editarcontacto" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/editarcontacto.jsp" />
+    </definition>     
+    
+    <definition name="listarcontactos" extends="miplantilla">
+        <put-attribute name="title" value="" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/listarcontactos.jsp" />
+    </definition>      
+       
+    <definition name="autores" extends="miplantilla">
+        <put-attribute name="title" value="autores" />
+        <put-attribute name="cuerpo" value="/WEB-INF/jsp/autores.jsp" />
+    </definition>
+  
+</tiles-definitions>
